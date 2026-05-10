@@ -51,6 +51,7 @@ namespace DoradoLibraryNowAPI.Controllers
 
             return Ok(new { status = "success", data = book, Message = "Boks updated." });
         }
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id) { 
             var book = books.FirstOrDefault((book) => book.Id == id);
             if (book == null)
