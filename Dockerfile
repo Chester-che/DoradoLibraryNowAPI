@@ -12,4 +12,4 @@ RUN dotnet publish "DoradoLibraryNowAPI/DoradoLibraryNowAPI.csproj" -c Release -
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/out .
-ENTRYPOINT ["dotnet", "DoradoLIbraryNowAPI.dll"}
+ENTRYPOINT ["dotnet", "DoradoLibraryNowAPI.dll"}
