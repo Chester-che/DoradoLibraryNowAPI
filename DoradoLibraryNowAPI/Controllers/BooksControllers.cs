@@ -28,7 +28,7 @@ namespace DoradoLibraryNowAPI.Controllers
                 return NotFound(new { status = "error", data = (object?)null, message = "Books not found" });
             return Ok(new { status = "success", data = book, message = "Books retrieved" });
         }
-        [HttpPost("{id}")]
+        [HttpPost]
         public IActionResult Create([FromBody] Book newBook)
         {
             newBook.Id = books.Count + 1;
